@@ -3,3 +3,7 @@ nav {
     flex-direction: row;
     column-gap: 2vw;
 }
+
+svg {
+    stroke: var(--title-color);
+}

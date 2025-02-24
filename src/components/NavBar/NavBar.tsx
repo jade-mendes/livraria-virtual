@@ -1,6 +1,7 @@
 import { UserRound, ShoppingCart } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import HeaderButton from "../HeaderButton/HeaderButton";
+import './styles.module.css'
 
 export default function NavBar(){
     return(
