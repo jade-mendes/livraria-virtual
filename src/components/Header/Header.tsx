@@ -7,7 +7,7 @@ export default function Header(){
 
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/book">Book</Link>
+                <Link to="/book-list">Nossos Livros</Link>
             </nav>
         </header>
     )
