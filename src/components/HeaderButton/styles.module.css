@@ -1,0 +1,6 @@
+.button {
+    background-color: var(--secondary-color);
+    border-radius: 5%;
+    padding: 10%;
+    border: none;
+}
