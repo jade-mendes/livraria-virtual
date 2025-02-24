@@ -1,5 +1,4 @@
 import { BookType } from '../../types/BookType'
-import Book from '../../components/Book/Book'
 
 const books: BookType[] = [
     {
@@ -30,7 +29,7 @@ export default function BookList(){
             <ul>
                 {books.map(book => (
                     <li key={book.id}>
-                        <Book title={book.title} author={book.author} description={book.description}/>
+                        "{book.title}"", de {book.author} <button>Ver mais</button>
                     </li>
                 ))}
             </ul>
