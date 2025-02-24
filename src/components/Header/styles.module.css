@@ -9,9 +9,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.header nav {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2vw;
-}
