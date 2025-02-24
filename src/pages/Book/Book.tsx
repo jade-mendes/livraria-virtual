@@ -1,7 +1,7 @@
 export default function Book(){
     return(
         <>
-            <p>página do livro</p>
+            <p>Essa é a página do livro</p>
         </>
     )
 }
