@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import styles from './styles.module.css'
+import logo from '/assets/logo.svg'
+import NavBar from '../NavBar/NavBar'
 
 export default function Header(){
     return(
-        <header>
-            <h1>Header</h1>
-
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/book-list">Nossos Livros</Link>
-            </nav>
+        <header className={styles.header}>
+            <Link to="/"><img src={logo} alt="Logo da livraria"></img></Link>
+            <NavBar/>
         </header>
     )
 }
