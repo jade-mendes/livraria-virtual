@@ -1,17 +1,40 @@
 .bannerContainer {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--banner-background);
+    padding: 3vw;
+    border-radius: 2vw;
     overflow: hidden;
-    height: 400px;
+    height: 350px;
+    margin: 0 5vw 0 5vw;
 }
 
-.bannerContainer > img {
+.bannerImage {
+    position: absolute;
     width: 100%;
-    object-fit: contain;
-    z-index: 0;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    inset: 0;
 }
 
-.bannerContainer > h2 {
-    z-index: 1;
-    
+.bannerText {
+    position: relative;
+    font-weight: bold;
+    color: var(--banner-text);
+    text-align: left;
+    max-width: 50%;
+}
+
+.bannerTitle {
+    font-size: 2rem;
+    color: var(--banner-title);
+    margin: 0%;
+}
+  
+.bannerSubtitle {
+    font-size: 1.75rem;
+    margin: 0%;
 }

@@ -4,8 +4,11 @@ import bannerImage from '/assets/banner.jpeg'
 export default function Banner(){
     return(
         <div className={styles.bannerContainer}>
-            <img src={bannerImage} alt="Banner promocional"></img>
-            <h2>50% de desconto <br/><span>nos livros do Paulo Coelho!</span></h2>
+            <img className={styles.bannerImage} src={bannerImage} alt="Livros do Paulo Coelho"></img>
+            <div className={styles.bannerText}>
+                <h2 className={styles.bannerTitle}>25% de desconto</h2>
+                <p className={styles.bannerSubtitle}>nos livros do Paulo Coelho!</p>
+            </div>
         </div>
     )
 }
