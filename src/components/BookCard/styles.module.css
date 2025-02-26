@@ -1,0 +1,40 @@
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+    column-gap: 2vw;
+    background-color: var(--secondary-color);
+    border-radius: 2vw;
+    padding: 2vw;
+    border: 1px solid var(--text-color);
+}
+
+.bookCover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+}
+
+.bookInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 1vw;
+}
+
+
+.bookInfo_text > h4 {
+    color: var(--title-color);
+    margin: 0%;
+}
+
+.bookInfo_text > h5 {
+    color: var(--text-color);
+    margin: 0%;
+}
+
+.bookInfo_price {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0%;
+}
