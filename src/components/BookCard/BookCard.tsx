@@ -1,20 +1,16 @@
+import { BookCardType } from '../../types/BookCardType'
 import styles from './styles.module.css'
 
-const testImage : string = 'https://a-static.mlcdn.com.br/800x560/livro-o-codigo-da-vinci-robert-langdon-livro-2/magazineluiza/089299600/9d4dbf21f0f6636ab5cb3952da44ca63.jpg'
-const bookTitle : string = 'O Código Da Vinci'
-const bookAuthor : string = 'Dan Brown'
-const bookPrice : number = 39.90
-
-export default function BookCard(){
+export default function BookCard({cover, title, author, price}: BookCardType){
     return(
         <div className={styles.cardContainer}>
-            <img className={styles.bookCover} src={testImage} alt={`capa do livro ${bookTitle}`}></img>
+            <img className={styles.bookCover} src={cover} alt={`capa do livro ${title}`}></img>
             <div className={styles.bookInfo}>
                 <div className={styles.bookInfo_text}>
-                    <h4>{bookTitle}</h4>
-                    <h5>{bookAuthor}</h5>
+                    <h4>{title}</h4>
+                    <h5>{author}</h5>
                 </div>
-                <p className={styles.bookInfo_price}>R$ {String(bookPrice)}</p>
+                <p className={styles.bookInfo_price}>R$ {String(price)}</p>
             </div>
         </div>
     )
