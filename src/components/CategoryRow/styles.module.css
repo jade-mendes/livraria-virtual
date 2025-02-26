@@ -1,0 +1,36 @@
+.categoryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 5vw 0 5vw;
+}
+
+.categoryHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.categoryHeader > h3 {
+    color: var(--title-color);
+}
+
+.categoryHeader > button {
+    border: none;
+    color: var(--accent-color);
+    font-weight: bold;
+    background-color: var(--background-color);
+    font-size: 2vh;
+}
+
+.booksRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 1vw;
+}
+
+.booksRow > li {
+    list-style-type: none;
+}
