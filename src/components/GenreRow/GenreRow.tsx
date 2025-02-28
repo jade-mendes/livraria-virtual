@@ -16,8 +16,7 @@ export default function GenreRow({rowName} : rowProps){
     function getFirstFourBooks(books : BookCardType[]) : BookCardType[]{
         let fourBookRow : BookCardType[] = [];
         const limit = 4;
-        let i = 0;
-        for (i = 0; i < limit; i++){
+        for (let i = 0; i < limit; i++){
             fourBookRow.push(books[i]);
         }
         return fourBookRow;
@@ -27,7 +26,7 @@ export default function GenreRow({rowName} : rowProps){
         axios.get(`http://localhost:3001/livros?genero=${rowName}`)
         .then(response => setBooksRow(getFirstFourBooks(response.data)))
         .catch(error => console.error('Algo deu errado: ' + error))
-    }, [])
+    }, []);
 
     return(
         <div className={styles.rowContainer}>
@@ -35,13 +34,13 @@ export default function GenreRow({rowName} : rowProps){
                 <h3>{rowName}</h3>
                 <button>Ver mais</button>
             </div>
-            <div className={styles.booksRow}>
+            <ul className={styles.booksRow}>
                 {booksRow.map((book) => (
                     <li key={book.id}>
                         <Link to={`/book/${book.id}`}> <BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} /> </Link>
                     </li>
                 ))}
-            </div>
+            </ul>
         </div>
-    )
+    );
 }

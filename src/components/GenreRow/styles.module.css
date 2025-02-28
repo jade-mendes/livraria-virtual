@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-content: stretch;
-    margin: var(--margins);
+    margin-bottom: 5vh;
 }
 
 .rowHeader {
@@ -30,8 +29,13 @@
     flex-direction: row;
     justify-content: space-between;
     column-gap: 0.8vw;
+    padding-left: 0px;
 }
 
-.booksRow > li {
+.booksRow li {
     list-style-type: none;
+}
+
+.booksRow li a {
+    text-decoration: none;
 }
