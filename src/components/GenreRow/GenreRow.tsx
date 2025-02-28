@@ -13,9 +13,19 @@ interface rowProps {
 export default function GenreRow({rowName} : rowProps){
     const [booksRow, setBooksRow] = useState<BookCardType[]>([])
 
+    function getFirstFourBooks(books : BookCardType[]) : BookCardType[]{
+        let fourBookRow : BookCardType[] = [];
+        const limit = 4;
+        let i = 0;
+        for (i = 0; i < limit; i++){
+            fourBookRow.push(books[i]);
+        }
+        return fourBookRow;
+    }
+
     useEffect(() => {
         axios.get(`http://localhost:3001/livros?genero=${rowName}`)
-        .then(response => setBooksRow(response.data))
+        .then(response => setBooksRow(getFirstFourBooks(response.data)))
         .catch(error => console.error('Algo deu errado: ' + error))
     }, [])
 
