@@ -3,15 +3,15 @@
     flex-direction: row;
     column-gap: 1vw;
     background-color: var(--secondary-color);
-    border-radius: 0.5vw;
+    border-radius: var(--border-radius);
     padding: 1vw;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .bookCover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     height: 10vh;
-    border-radius: 0.5vw;
+    border-radius: var(--border-radius);
     width: auto;
 }
 

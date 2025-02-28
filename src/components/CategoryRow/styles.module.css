@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-content: stretch;
-    margin: 5vh 5vw 0 5vw;
+    margin: var(--margins);
 }
 
 .categoryHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 2vh;
 }
 
 .categoryHeader > h3 {
