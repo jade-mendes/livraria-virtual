@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { BookType } from "../../types/BookType"
 import { useParams } from "react-router-dom";
 import { formatPrice } from "../../utils/formatPrice";
+import BackToHomeButton from "../../components/BackToHomeButton/BackToHomeButton";
 
 export default function BookDetails(){
     const [book, setBook] = useState<BookType>()
@@ -12,12 +13,13 @@ export default function BookDetails(){
     useEffect(() => {
         axios.get(`http://localhost:3001/livros/${params.bookId}`)
         .then(response => setBook(response.data))
-        .catch(error => console.error('Algo deu errado: ' + error))
+        .catch(error => {console.error('Algo deu errado: ' + error)})
     }, [])
 
-    return(
+    if (!book) return (<h4> Livro não encontrado</h4>)
+    else return(
         <div>
-            <h4>Detalhes do livro</h4>
+            <BackToHomeButton />
             <div className={styles.bookInfoContainer}>
                 <img className={styles.bookInfo_cover} src={book?.capa}></img>
                 <div className={styles.bookInfo_text}>
