@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import RootLayout from "./RootLayout";
 import Cart from "./pages/Cart/Cart";
 import BookDetails from "./pages/BookDetails/BookDetails";
+import BooksByGenre from "./pages/BooksByGenre/BooksByGenre";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "/book/:bookId",
                 element: <BookDetails />
+            },
+            {
+                path: "/genre/:genreName",
+                element: <BooksByGenre />
             },
             {
                 path: "/cart",

@@ -34,7 +34,7 @@ export default function BookDetails(){
                 </div>
             </div>
             <span>R$ {formatPrice(book?.preco)}</span>
-            <button className={styles.accentButton}>Adicionar ao carrinho</button>
+            <button className={styles.accentButton}>Adicionar ao carrinho</button>     
         </div>
     )
 }
