@@ -23,8 +23,8 @@ export default function CategoryRow(){
             </div>
             <div className={styles.booksRow}>
                 {booksRow.map((book) => (
-                    <li  key={book.id}>
-                        <BookCard id={book.id} cover={book.cover} title={book.title} author={book.author} price={book.price} />
+                    <li key={book.id}>
+                        <BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} />
                     </li>
                 ))}
             </div>

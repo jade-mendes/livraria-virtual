@@ -1,7 +1,7 @@
 export interface BookCardType {
     id: number
-    cover: string
-    title: string
-    author: string
-    price: number
+    capa: string
+    titulo: string
+    autor: string
+    preco: number
 }
