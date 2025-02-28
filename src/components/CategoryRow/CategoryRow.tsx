@@ -3,6 +3,7 @@ import BookCard from '../BookCard/BookCard'
 import styles from './styles.module.css'
 import { useState, useEffect } from "react"
 import { BookCardType } from '../../types/BookCardType'
+import { Link } from 'react-router-dom'
 
 
 
@@ -24,7 +25,7 @@ export default function CategoryRow(){
             <div className={styles.booksRow}>
                 {booksRow.map((book) => (
                     <li key={book.id}>
-                        <BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} />
+                        <Link to={`/book/${book.id}`}> <BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} /> </Link>
                     </li>
                 ))}
             </div>

@@ -1,0 +1,46 @@
+.bookInfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: var(--margins);
+    column-gap: 3vw;
+}
+
+#titleAndAuthor h2, h3{
+    margin: 0%;
+}
+
+#titleAndAuthor {
+    margin-bottom: 5vh;
+}
+
+.bookInfo_text  h3 {
+    color: var(--text-color);
+}
+
+.bookInfo_text  p {
+    color: var(--text-color);
+}
+
+.bookInfo_cover {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: 3%;
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.bookInfo_cover > img {
+    box-shadow: var(--box-shadow);
+    
+}
+
+.accentButton {
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    border: none;
+    padding: 1%;
+    border-radius: var(--border-radius);
+}

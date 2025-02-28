@@ -1,6 +1,8 @@
 export interface BookType {
     id: number
-    title: string
-    author: string
-    description: string
+    capa: string
+    titulo: string
+    autor: string
+    sinopse: string
+    preco: number
 }
