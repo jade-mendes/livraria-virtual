@@ -1,4 +1,5 @@
 import styles from './styles.module.css'
+import { formatPrice } from "../../utils/formatPrice";
 
 interface BookCardProps {
     cover: string
@@ -16,7 +17,7 @@ export default function BookCard({cover, title, author, price}: BookCardProps){
                     <h4>{title}</h4>
                     <h5>{author}</h5>
                 </div>
-                <p className={styles.bookInfo_price}>R$ {String(price)}</p>
+                <p className={styles.bookInfo_price}>R$ {formatPrice(price)}</p>
             </div>
         </div>
     )

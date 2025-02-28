@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 import { useEffect, useState } from "react"
 import { BookType } from "../../types/BookType"
 import { useParams } from "react-router-dom";
+import { formatPrice } from "../../utils/formatPrice";
 
 export default function BookDetails(){
     const [book, setBook] = useState<BookType>()
@@ -30,7 +31,7 @@ export default function BookDetails(){
                     
                 </div>
             </div>
-            <span>R$ {book?.preco}</span>
+            <span>R$ {formatPrice(book?.preco)}</span>
             <button className={styles.accentButton}>Adicionar ao carrinho</button>
         </div>
     )
