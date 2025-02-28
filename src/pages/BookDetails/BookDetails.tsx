@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { BookType } from "../../types/BookType"
 import { useParams } from "react-router-dom";
 
-export default function Book(){
+export default function BookDetails(){
     const [book, setBook] = useState<BookType>()
     let params = useParams();
 
