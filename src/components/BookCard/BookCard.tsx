@@ -1,7 +1,13 @@
-import { BookCardType } from '../../types/BookCardType'
 import styles from './styles.module.css'
 
-export default function BookCard({cover, title, author, price}: BookCardType){
+interface BookCardProps {
+    cover: string
+    title: string
+    author: string
+    price: number
+}
+
+export default function BookCard({cover, title, author, price}: BookCardProps){
     return(
         <div className={styles.cardContainer}>
             <img className={styles.bookCover} src={cover} alt={`capa do livro ${title}`}></img>
