@@ -5,21 +5,24 @@ import { useState, useEffect } from "react"
 import { BookCardType } from '../../types/BookCardType'
 import { Link } from 'react-router-dom'
 
+interface rowProps {
+    rowName: string
+}
 
 
-export default function CategoryRow(){
+export default function GenreRow({rowName} : rowProps){
     const [booksRow, setBooksRow] = useState<BookCardType[]>([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/livros?_limit=4genero=Best-sellers')
+        axios.get(`http://localhost:3001/livros?genero=${rowName}`)
         .then(response => setBooksRow(response.data))
         .catch(error => console.error('Algo deu errado: ' + error))
     }, [])
 
     return(
-        <div className={styles.categoryContainer}>
-            <div className={styles.categoryHeader}>
-                <h3>Best-sellers</h3>
+        <div className={styles.rowContainer}>
+            <div className={styles.rowHeader}>
+                <h3>{rowName}</h3>
                 <button>Ver mais</button>
             </div>
             <div className={styles.booksRow}>

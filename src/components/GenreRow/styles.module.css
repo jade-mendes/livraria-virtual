@@ -1,4 +1,4 @@
-.categoryContainer {
+.rowContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,18 +6,18 @@
     margin: var(--margins);
 }
 
-.categoryHeader {
+.rowHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2vh;
 }
 
-.categoryHeader > h3 {
+.rowHeader > h3 {
     color: var(--title-color);
 }
 
-.categoryHeader > button {
+.rowHeader > button {
     border: none;
     color: var(--accent-color);
     font-weight: bold;

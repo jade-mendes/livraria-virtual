@@ -1,9 +1,10 @@
-import CategoryRow from "../CategoryRow/CategoryRow";
+import GenreRow from "../GenreRow/GenreRow";
 
 export default function BookList(){
     return(
         <>
-            <CategoryRow />
+            <GenreRow rowName='Best-sellers' />
+            <GenreRow rowName="Clássicos" />
         </>
     )
 }
