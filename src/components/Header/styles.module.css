@@ -1,7 +1,7 @@
 .header {
     background-color: var(--background-color);
     margin: 0%;
-    height: 120px;
+    height: 100px;
     padding: 0 5vw 0 5vw;
     box-shadow: 0px 8px 10px 0px rgba(9, 9, 55, 0.02);
     display: flex;
