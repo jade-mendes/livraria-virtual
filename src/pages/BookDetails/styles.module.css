@@ -1,7 +1,12 @@
+section {
+    display: flex;
+    flex-direction: column;
+}
+
 .bookInfoContainer {
     display: flex;
     justify-content: space-between;
-    margin: var(--margins);
+    margin: 0 5vw 8vh 5vw;
     column-gap: 3vw;
 }
 
@@ -26,8 +31,8 @@
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     padding: 3%;
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
     object-fit: contain;
 }
 
@@ -42,4 +47,16 @@
     border: none;
     padding: 1%;
     border-radius: var(--border-radius);
+    align-self: flex-end;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+
+.accentButton span{
+    margin-right: 30px;
+}
+
+.accentButton:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }

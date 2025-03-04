@@ -18,7 +18,7 @@ export default function BookDetails(){
 
     if (!book) return (<h4> Livro não encontrado</h4>)
     else return(
-        <div>
+        <section>
             <BackToHomeButton innerText="Detalhes do livro" />
             <div className={styles.bookInfoContainer}>
                 <img className={styles.bookInfo_cover} src={book?.capa}></img>
@@ -33,8 +33,10 @@ export default function BookDetails(){
                     
                 </div>
             </div>
-            <span>R$ {formatPrice(book?.preco)}</span>
-            <button className={styles.accentButton}>Adicionar ao carrinho</button>     
-        </div>
+            <button className={styles.accentButton}> 
+                <span>R$ {formatPrice(book?.preco)}</span> 
+                Adicionar ao carrinho
+            </button>     
+        </section>
     )
 }
