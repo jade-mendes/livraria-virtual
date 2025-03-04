@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import BackToHomeButton from "../../components/BackToHomeButton/BackToHomeButton";
+import styles from './styles.module.css'
+import BookCard from "../../components/BookCard/BookCard";
+import { BookCardType } from "../../types/BookCardType";
 
 export default function BooksByGenre(){
-    const [books, setBooks] = useState([]);
+    const [books, setBooks] = useState<BookCardType[]>([]);
     let params = useParams();
 
     useEffect(() => {
@@ -13,12 +16,22 @@ export default function BooksByGenre(){
         .catch(error => {console.error('Algo deu errado: ' + error)})
     }, []);
 
-    if (!books) return (<h4> Gênero não encontrado</h4>)
+    if (books.length == 0) return (<h4> Gênero não encontrado</h4>)
     else return (
-        <div>
-            <BackToHomeButton innerText={params.genreName!}/>
-            <p>Lista de livros do gênero {params.genreName}</p>
-
-        </div>
+        <>
+            <section className={styles.searchBar}>
+                <input type="text" placeholder="Pesquisar por título"></input>
+            </section>
+            <section className={styles.content}>
+                <BackToHomeButton innerText={params.genreName!}/>
+                <ul className={styles.booksByGenreList}>
+                    {books.map((book) => (
+                        <li key={book.id}>
+                            <Link to={`/book/${book.id}`}><BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} variant="expanded" /></Link>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </>
     )
 }
