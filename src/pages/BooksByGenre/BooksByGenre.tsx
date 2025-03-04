@@ -8,7 +8,12 @@ import { BookCardType } from "../../types/BookCardType";
 
 export default function BooksByGenre(){
     const [books, setBooks] = useState<BookCardType[]>([]);
+    const [query, setQuery] = useState("");
     let params = useParams();
+
+    const filteredBooks = books.filter(book => {
+        return book.titulo.toLocaleLowerCase().includes(query.toLocaleLowerCase());
+    })
 
     useEffect(() => {
         axios.get(`http://localhost:3001/livros?genero=${params.genreName}`)
@@ -20,12 +25,17 @@ export default function BooksByGenre(){
     else return (
         <>
             <section className={styles.searchBar}>
-                <input type="text" placeholder="Pesquisar por título"></input>
+                <input 
+                    type="text" 
+                    placeholder="Pesquisar por título"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                />
             </section>
             <section className={styles.content}>
                 <BackToHomeButton innerText={params.genreName!}/>
                 <ul className={styles.booksByGenreList}>
-                    {books.map((book) => (
+                    {filteredBooks.map((book) => (
                         <li key={book.id}>
                             <Link to={`/book/${book.id}`}><BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} variant="expanded" /></Link>
                         </li>
