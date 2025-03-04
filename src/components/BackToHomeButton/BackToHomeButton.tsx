@@ -2,12 +2,16 @@ import { ChevronLeft } from 'lucide-react';
 import styles from './styles.module.css'
 import { Link } from 'react-router-dom';
 
-export default function BackToHomeButton(){
+interface ButtonProps {
+    innerText : string 
+}
+
+export default function BackToHomeButton({ innerText } : ButtonProps){
     return (
         <Link to={'/'}>
             <div className={styles.buttonContainer}>
                 <ChevronLeft />
-                <h4>Detalhes do livro</h4>
+                <h4>{innerText}</h4>
             </div>
         </Link>
     )

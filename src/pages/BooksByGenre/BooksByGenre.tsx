@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
+import BackToHomeButton from "../../components/BackToHomeButton/BackToHomeButton";
 
 export default function BooksByGenre(){
     const [books, setBooks] = useState([]);
@@ -13,9 +14,9 @@ export default function BooksByGenre(){
     }, []);
 
     if (!books) return (<h4> Gênero não encontrado</h4>)
-    return (
+    else return (
         <div>
-            <p>Botão de voltar</p>
+            <BackToHomeButton innerText={params.genreName!}/>
             <p>Lista de livros do gênero {params.genreName}</p>
 
         </div>

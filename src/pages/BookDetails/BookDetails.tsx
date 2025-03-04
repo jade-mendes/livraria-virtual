@@ -19,7 +19,7 @@ export default function BookDetails(){
     if (!book) return (<h4> Livro não encontrado</h4>)
     else return(
         <div>
-            <BackToHomeButton />
+            <BackToHomeButton innerText="Detalhes do livro" />
             <div className={styles.bookInfoContainer}>
                 <img className={styles.bookInfo_cover} src={book?.capa}></img>
                 <div className={styles.bookInfo_text}>
