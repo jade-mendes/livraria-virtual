@@ -6,11 +6,12 @@ interface BookCardProps {
     title: string
     author: string
     price: number
+    variant? : "default" | "expanded"
 }
 
-export default function BookCard({cover, title, author, price}: BookCardProps){
+export default function BookCard({cover, title, author, price, variant}: BookCardProps){
     return(
-        <div className={styles.cardContainer}>
+        <div className={variant === "default" ? styles.defaultCard : styles.expandedCard}>
             <img className={styles.bookCover} src={cover} alt={`capa do livro ${title}`}></img>
             <div className={styles.bookInfo}>
                 <div className={styles.bookInfo_text}>

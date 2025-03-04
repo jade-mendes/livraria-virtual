@@ -37,7 +37,7 @@ export default function GenreRow({rowName} : rowProps){
             <ul className={styles.booksRow}>
                 {booksRow.map((book) => (
                     <li key={book.id}>
-                        <Link to={`/book/${book.id}`}> <BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} /> </Link>
+                        <Link to={`/book/${book.id}`}> <BookCard cover={book.capa} title={book.titulo} author={book.autor} price={book.preco} variant="default" /> </Link>
                     </li>
                 ))}
             </ul>
