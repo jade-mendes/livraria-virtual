@@ -1,6 +1,5 @@
 .bookInfoContainer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin: var(--margins);
     column-gap: 3vw;
