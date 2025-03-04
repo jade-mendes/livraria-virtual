@@ -32,7 +32,7 @@ export default function GenreRow({rowName} : rowProps){
         <div className={styles.rowContainer}>
             <div className={styles.rowHeader}>
                 <h3>{rowName}</h3>
-                <button>Ver mais</button>
+                <Link to={`/genre/${rowName}`}>Ver mais</Link>
             </div>
             <ul className={styles.booksRow}>
                 {booksRow.map((book) => (
