@@ -3,6 +3,8 @@
     flex-direction: row;
     align-items: center;
     margin-left: 5vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 a {
