@@ -84,13 +84,13 @@
     border-radius: var(--border-radius);
     font-weight: 500;
     min-width: 195px;
+    cursor: pointer;
 }
 
 .loginButton {
     border: none;
     background-color: var(--accent-color);
     color: var(--background-color);
-    
 }
 
 .registerButton {
