@@ -4,15 +4,16 @@ import RootLayout from "./RootLayout";
 import Cart from "./pages/Cart/Cart";
 import BookDetails from "./pages/BookDetails/BookDetails";
 import BooksByGenre from "./pages/BooksByGenre/BooksByGenre";
+import Login from "./pages/Login/Login";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <RootLayout/>,
+        element: <RootLayout />,
         children: [
             {
                 index: true,
-                element: <Home/>
+                element: <Home />
             },
             {
                 path: "/book/:bookId",
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
                 element: <Cart/>
             }
         ]
+    },
+    {
+        path: "/login",
+        element: <Login />
     }
 ])
 

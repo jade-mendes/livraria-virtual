@@ -1,0 +1,36 @@
+* {
+    margin: 0%;
+}
+
+.loginContainer {
+    display: flex;
+    height: 100vh;
+}
+
+#loginImage {
+    background-color: var(--banner-background);
+    width: 50%;
+}
+
+#loginImage > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+}
+
+.loginForm > h4 {
+    color: var(--text-color);
+}
+
+.loginForm > img {
+    align-self: center;
+}
