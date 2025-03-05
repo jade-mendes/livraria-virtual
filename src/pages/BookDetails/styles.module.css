@@ -49,6 +49,7 @@ section {
     border-radius: var(--border-radius);
     align-self: flex-end;
     margin-right: 5vw;
+    margin-bottom: 5vh;
     cursor: pointer;
 }
 
