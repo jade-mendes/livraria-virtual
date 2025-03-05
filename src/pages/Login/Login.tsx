@@ -21,11 +21,10 @@ export default function Login(){
         resolver: zodResolver(loginSchema)
     });
 
-    async function logUser(data: any){
+    async function logUser(){
         await new Promise(resolve => setTimeout(resolve, 2000));
-        console.log(data);
         reset();
-        navigate('/');
+        navigate('/home');
     }
 
     return (

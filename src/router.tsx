@@ -9,10 +9,14 @@ import Login from "./pages/Login/Login";
 const router = createBrowserRouter([
     {
         path: "/",
+        element: <Login />
+    },
+    {
+        path: "/",
         element: <RootLayout />,
         children: [
             {
-                index: true,
+                path: "/home",
                 element: <Home />
             },
             {
@@ -28,11 +32,8 @@ const router = createBrowserRouter([
                 element: <Cart/>
             }
         ]
-    },
-    {
-        path: "/login",
-        element: <Login />
     }
+    
 ])
 
 export default router;
