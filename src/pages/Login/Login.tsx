@@ -10,25 +10,28 @@ export default function Login(){
                 <img src={imgPath} alt='livros empilhados em uma livraria aconchegante'/>
             </div>
 
-            <div className={styles.loginForm}>
+            <div className={styles.loginPanel}>
                 <img src={logo} alt='logo da livraria'></img>
-                <h4>Bem vindo(a)!</h4>
-                <h2>Entre na sua conta</h2>
+                <div className={styles.textAndFormGroup}>
+                    <h4>Bem vindo(a)!</h4>
+                    <h2>Entre na sua conta</h2>
 
-                <form className={styles.form}>
-                    <div className={styles.inputGroup}>
-                        <label>E-mail</label>
-                        <input type='email' placeholder='Digite aqui seu e-mail'/>
-                    </div>
+                    <form className={styles.form}>
+                        <div className={styles.inputGroup}>
+                            <label>E-mail</label>
+                            <input type='email' placeholder='Digite aqui seu e-mail'/>
+                        </div>
 
-                    <div className={styles.inputGroup}>
-                        <label>Senha</label>
-                        <input type='password' placeholder='Digite aqui sua senha'/>
-                    </div>
-
-                    <button className={styles.loginButton}>Entrar</button>
-                    <button className={styles.registerButton}>Cadastre-se</button>
-                </form>
+                        <div className={styles.inputGroup}>
+                            <label>Senha</label>
+                            <input type='password' placeholder='Digite aqui sua senha'/>
+                        </div>
+                        <div className={styles.buttonsGroup}>
+                            <button className={styles.loginButton}>Entrar</button>
+                            <button className={styles.registerButton}>Cadastre-se</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     )
