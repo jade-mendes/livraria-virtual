@@ -2,6 +2,9 @@
 Pequena simulação de um e-commerce de livros visando praticar conceitos relacionados a componentização, navegação, formulários e autenticação, e exibição de dados via API. Nessa aplicação, usuários podem fazer login para acessar a página principal, onde os livros são separados por categoria. A partir daí, os usuários podem navegar por categoria e ou selecionar um livro específico. Esse projeto faz parte da capacitação da IN Junior 2025-1. <br>
 <sub>Elementos visuais sem funcionalidade não são um erro, eles apenas não fazem parte dos requisitos da atividade, mas foram mantidos pela coerência visual.</sub>
 
+<img src="public/assets/screenshot-1.png" width=60% height=60% alt="Página inicial vista em um desktop"> <img src="public/assets/screenshot-2.png" width=20% height=20% alt="Página de livros Clássicos vista em um smartphone">
+<img src="public/assets/screenshot-3.png" width=60% height=60% alt="Página do livro 'Neuromancer' vista em um tablet no modo retrato"> 
+
 ## Tecnologias Utilizadas
 * React
 * TypeScript 
@@ -48,3 +51,4 @@ e clique no link que aparecerá no terminal. Para terminar a execução, digite 
 ## Melhorias Futuras
 * Criação da página do Carrinho
 * Funcionalidade do botão "Adicionar ao carrinho"
+* Melhorar responsividade da página individual do livro em mobile
